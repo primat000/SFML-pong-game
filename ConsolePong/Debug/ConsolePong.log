@@ -1,0 +1,4 @@
+﻿  stdafx.cpp
+  ConsolePong.cpp
+c:\users\key\desktop\consolepong\consolepong\consolepong.cpp(122): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  ConsolePong.vcxproj -> C:\Users\key\Desktop\ConsolePong\Debug\ConsolePong.exe
