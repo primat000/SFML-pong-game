@@ -1,1 +1,14 @@
-﻿  ConsolePong.vcxproj -> C:\Users\key\Desktop\ConsolePong\x64\Debug\ConsolePong.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Pong.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Ball.cpp
+c:\users\key\desktop\consolepong\consolepong\ball.cpp(14): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\key\desktop\consolepong\consolepong\ball.cpp(18): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  ConsolePong.cpp
+c:\users\key\desktop\consolepong\consolepong\paddle.h(16): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  GameManager.cpp
+c:\users\key\desktop\consolepong\consolepong\paddle.h(16): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  Paddle.cpp
+c:\users\key\desktop\consolepong\consolepong\paddle.h(16): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\key\desktop\consolepong\consolepong\paddle.cpp(16): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  Создание кода...
+  LINK : не найден или не выполнена сборка C:\Users\key\Desktop\ConsolePong\x64\Debug\ConsolePong.exe при последней инкрементной компоновке; выполняется полная компоновка
+  ConsolePong.vcxproj -> C:\Users\key\Desktop\ConsolePong\x64\Debug\ConsolePong.exe

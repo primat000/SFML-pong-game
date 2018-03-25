@@ -8,7 +8,7 @@ private:
 	sf::Vector2f paddleSize;
 	sf::RenderWindow* window; 
 	sf::RectangleShape rectangle; 
-	const float paddleSpeed = 700.f;
+	const float paddleSpeed = 600.f;
 	float ballAngle = 0.f;
 public:
 	Paddle(sf::RenderWindow* window, int posX, int posY);
