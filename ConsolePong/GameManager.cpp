@@ -27,9 +27,6 @@ void GameManager::ScoreUp(Paddle * player)
 {
 	if (player == player1) score1++;
 	else if (player == player2) score2++;
-	ball->Reset();
-	player1->Reset();
-	player2->Reset();
 }
 void GameManager::Draw()
 {
@@ -71,14 +68,14 @@ void GameManager::DetectAndFixCollisions()
 	// Check collisions between the ball and the screen
 	if (ball->getBall()->getPosition().x - ball->getRadius() < 0.f)
 	{
-		score2++;
+		ScoreUp(player2);
 		isPlaying = false;
 		//pauseMessage.setString("You lost!\nPress space to restart or\nescape to exit");
 		scoreMessage.setString("Player1 = " + std::to_string(score1) + "\t\t\t\t\t\t\t\t\t Player2 = " + std::to_string(score2));
 	}
 	if (ball->getBall()->getPosition().x + ball->getRadius() > width)
 	{
-		score1++;
+		ScoreUp(player1);
 		isPlaying = false;
 		//pauseMessage.setString("You won!\nPress space to restart or\nescape to exit");
 		scoreMessage.setString("Player1 = " + std::to_string(score1) + "\t\t\t\t\t\t\t\t\t Player2 = " + std::to_string(score2));
@@ -105,6 +102,7 @@ void GameManager::DetectAndFixCollisions()
 		else
 			ball->setAngle(pi - ball->getAngle() - (std::rand() % 20) * pi / 180);
 
+		ball->setBallSpeed(ball->getBallSpeed() + 10.f); //increase ball speed
 		ball->setPosition(player1->getPosition().x + ball->getRadius() + player1->getPaddleSize().x / 2 + 0.1f, ball->getPosition().y);
 	}
 	//Right Paddle
@@ -118,6 +116,7 @@ void GameManager::DetectAndFixCollisions()
 		else
 			ball->setAngle(pi - ball->getAngle() - (std::rand() % 20) * pi / 180);
 
+		ball->setBallSpeed(ball->getBallSpeed() + 10.f); //increase ball speed
 		ball->setPosition(player2->getPosition().x - ball->getRadius() - player2->getPaddleSize().x / 2 - 0.1f, ball->getPosition().y);
 	}
 

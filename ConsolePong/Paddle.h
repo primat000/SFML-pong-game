@@ -8,7 +8,7 @@ private:
 	sf::Vector2f paddleSize;
 	sf::RenderWindow* window; 
 	sf::RectangleShape rectangle; 
-	const float paddleSpeed = 400.f;
+	const float paddleSpeed = 700.f;
 	float ballAngle = 0.f;
 public:
 	Paddle(sf::RenderWindow* window, int posX, int posY);
@@ -20,10 +20,5 @@ public:
 	void moveUp(float deltaTime);
 	void moveDown(float deltaTime);
 	inline sf::RectangleShape * getPaddle() { return &rectangle; }
-	friend std::ostream & operator<<(std::ostream & o, Paddle p)
-	{
-		o << "Paddle [" << p.getPaddleSize().x << "," << p.getPaddleSize().y << "]";
-		return o;
-	}
 };
 

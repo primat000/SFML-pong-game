@@ -16,6 +16,8 @@ Ball::Ball(int posX, int posY)
 void Ball::Reset()
 {
 	ball.setPosition(originalX, originalY);
+	ballSpeed = 400.f;
+	ballAngle = 0.f;
 }
 void Ball::setPosition(float x, float y)
 {
